@@ -1,4 +1,9 @@
 ---
+type Route = {
+  name: string;
+  path: `/${string}`;
+};
+
 const routes = [
   {
     name: 'Home',
@@ -16,7 +21,11 @@ const routes = [
     name: 'Contact',
     path: '/contact',
   },
-];
+  {
+    name: 'Tags',
+    path: '/tags',
+  },
+] satisfies Route[];
 
 const currentRoute = Astro.url.pathname;
 ---
